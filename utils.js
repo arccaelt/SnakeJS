@@ -1,6 +1,6 @@
 import {GAME_CONFIG} from "./config.js";
 import {movingDirection} from "./config.js";
-import {Cell} from "./cell.js";
+import Cell from "./cell.js";
 import {drawRect} from "./renderer.js";
 
 let lookup = [];
