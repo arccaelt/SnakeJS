@@ -1,8 +1,8 @@
 import {GAME_CONFIG} from "./config.js";
-import {Cell} from "./cell.js";
+import Cell from "./cell.js";
 import {drawRect} from "./renderer.js";
 
-export class Snake {
+export default class Snake {
     constructor(start_x, start_y, initialMovingDirection) {
         this.direction = initialMovingDirection;
         this.body = [new Cell(start_x, start_y)];

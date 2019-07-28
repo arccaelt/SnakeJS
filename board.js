@@ -1,10 +1,10 @@
 import {GAME_CONFIG} from "./config.js";
 import {drawRect} from "./renderer.js";
-import {Cell} from "./cell.js";
+import Cell from "./cell.js";
 import {canvasWidth} from "./renderer.js";
 import {canvasHeight} from "./renderer.js";
 
-export class Board {
+export default class Board {
     constructor() {
         this.cells = [];
 
