@@ -1,4 +1,11 @@
-"use strict";
+import {GAME_CONFIG} from "./config.js";
+import {movingDirection} from "./config.js";
+import {Board} from "./board.js";
+import {Snake} from "./snake.js";
+import {ScoreHandler} from "./score.js";
+import {getFood} from "./utils.js";
+import {getRandomMovingDirection} from "./utils.js";
+import {getRandomPositions} from "./utils.js";
 
 // Create stuff
 let board = new Board();

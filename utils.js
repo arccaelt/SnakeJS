@@ -1,4 +1,7 @@
-"use strict";
+import {GAME_CONFIG} from "./config.js";
+import {movingDirection} from "./config.js";
+import {Cell} from "./cell.js";
+import {drawRect} from "./renderer.js";
 
 let lookup = [];
 
@@ -12,7 +15,7 @@ function createLookupTable() {
     }
 }
 
-function getRandomPositions() {
+export function getRandomPositions() {
     if (lookup.length == 0) {
         createLookupTable();
     }
@@ -22,7 +25,7 @@ function getRandomPositions() {
 }
 
 // Keep generating random positions until we generate one that's good: is not in the snake
-function getFood(snakePositions) {
+export function getFood(snakePositions) {
     while (true) {
         var pos = getRandomPositions();
         let isGood = true;
@@ -42,7 +45,7 @@ function getFood(snakePositions) {
     return new Cell(pos[0], pos[1]);
 }
 
-function getRandomMovingDirection() {
+export function getRandomMovingDirection() {
     let choiceSpace = Object.keys(movingDirection);
     let choice = Math.floor(choiceSpace.length * Math.random());
     console.log(choice, choiceSpace[choice]);

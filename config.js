@@ -1,4 +1,4 @@
-let GAME_CONFIG = {
+export let GAME_CONFIG = {
     // time in ms
     GAME_SPEED : 200,
 
@@ -12,7 +12,7 @@ let GAME_CONFIG = {
     FOOD_CELL_COLOR : "green",
 };
 
-let movingDirection = {
+export let movingDirection = {
     UP: [0, -1],
     DOWN: [0, 1],
     LEFT: [-1, 0],

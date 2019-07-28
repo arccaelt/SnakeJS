@@ -1,6 +1,4 @@
-"use strict";
-
-class Cell
+export class Cell
 {
     constructor(x, y)
     {
